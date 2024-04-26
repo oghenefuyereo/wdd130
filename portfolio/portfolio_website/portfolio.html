@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+  <head>
+    <meta charset="utf-8">
+    <title>Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Oswald:wght@700&display=swap');
+      </style>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Oswald:wght@700&family=Roboto:wght@100&display=swap');
+      </style>
+  </head>
+  <body>
+    <div id="content">
+    <header>
+      <a id="logo-link" href="index.html">
+          <img class="logo" src="images/logo_image/logo.jpg" alt="Dry Oar Logo">
+      </a>
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+      </nav>
+  </header>
+
+
+  <h1 class="home-title">Our Portfolio is our Track Record</h1>
+  
+<div class="mySlides">
+  <div class="numbertext">1 / 6</div>
+  <img src="images/portfolio-images/portfolio2.jpg" style="width:100%"  alt="portfolio image">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">2 / 6</div>
+  <img src="images/home_images/home1.jpg" style="width:100%"  alt="portfolio image">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">3 / 6</div>
+  <img src="images/contact_images/contact.jpg" style="width:100%"  alt="portfolio image">
+</div>
+  
+<div class="mySlides">
+  <div class="numbertext">4 / 6</div>
+  <img src="images/contact_images/contact1.jpg" style="width:100%"  alt="portfolio image">
+</div>
+
+<div class="mySlides">
+  <div class="numbertext">5 / 6</div>
+  <img src="images/portfolio-images/portfolio8.jpg" style="width:100%"  alt="portfolio image">
+</div>
+  
+<div class="mySlides">
+  <div class="numbertext">6 / 6</div>
+  <img src="images/portfolio-images/portfolio11.jpg" style="width:100%"  alt="portfolio image">
+</div>
+  
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+<div class="caption-container">
+  <p id="caption"></p>
+</div>
+
+<div class="row">
+  <div class="column">
+    <img class="demo cursor" src="images/portfolio-images/portfolio2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Beautiful City">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="images/home_images/home1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Bright Camera">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="images/contact_images/contact.jpg" style="width:100%" onclick="currentSlide(3)" alt="Unlimited contact">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="images/contact_images/contact1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Unlimited contact">
+  </div>
+  <div class="column">
+    <img class="demo cursor" src="images/portfolio-images/portfolio8.jpg" style="width:100%" onclick="currentSlide(5)" alt="Beautiful Wedding photography">
+  </div>    
+  <div class="column">
+    <img class="demo cursor" src="images/portfolio-images/portfolio11.jpg" style="width:100%" onclick="currentSlide(6)" alt="Black beauty">
+  </div>
+</div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+let i;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("demo");
+let captionText = document.getElementById("caption");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+  slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+  dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+  <section id="main-msg">
+      <h2 class="header-white-bg-color">Expore On our photography</h2>
+      <div class="text-msg">
+      <p>Welcome to my photography portfolio, where moments come to life through the lens. Each image in this collection reflects my passion for capturing the beauty and emotion in the world around us. From intimate portraits to breathtaking landscapes, my work is a visual journey through life's many facets.
+
+        As a photographer, I strive to freeze time and preserve the magic of fleeting moments. I believe that every picture tells a story, and my goal is to share those narratives with you. Whether it's a candid smile, a majestic sunset, or a quiet moment of reflection, my photographs aim to evoke emotions and spark connections.
+        
+        My style is characterized by a blend of creativity, authenticity, and technical precision. I use various photographic techniques and equipment to ensure that each image is a work of art. With an eye for detail and a passion for storytelling, I bring a unique perspective to every shot.
+        
+        This portfolio is a glimpse into my artistic journey, and I invite you to explore the diverse range of subjects and scenes I've had the privilege to capture. Whether you're seeking a photographer for a special occasion, a portrait session, or to document the world around you, I'm here to bring your vision to life.
+        
+        Thank you for visiting my portfolio, and I hope you find inspiration and enjoyment in the moments I've shared through my lens. If you'd like to collaborate or have any questions, please feel free to get in touch. Let's create beautiful memories together</p>
+</div>
+<div class="photo-grid">
+  <!-- Replace these image URLs with your own -->
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio2.jpg" alt="Photo 1"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio3.jpg" alt="Photo 2"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio4.jpg" alt="Photo 3"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio5.jpg" alt="Photo 4"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio6.jpg" alt="Photo 5"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio7.jpg" alt="Photo 6"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio8.jpg" alt="Photo 7"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio9.jpg" alt="Photo 8"></div>
+  <div class="photo"><img class="photo" src="images/portfolio-images/portfolio10.jpg" alt="Photo 9"></div>
+</div>
+      
+  </section>
+  <div class="single-img-div"><img class="single-img" src="images/contact_images/contact1.jpg"  alt="Photo 3"></div>
+
+    <footer>
+      <p>Portfolio &copy; 2023 - Oghenefuyere Okiotorhoro</p>
+      
+      <p><a href="https://oghenefuyere.github.io/wdd130a/portfolio/site-plan.html">Site Plan</a></p>
+      <div class="social">
+          <a href="https://facebook.com" target="_blank">
+              <img src="https://byui-wdd.github.io/wdd130/rafting_images/facebook.png" alt="fb icon">
+          </a>
+          <a href="https://twitter.com" target="_blank">
+              <img src="https://byui-wdd.github.io/wdd130/rafting_images/twitter.png" alt="twitter icon">
+          </a>
+          <a href="https://instagram.com" target="_blank">
+              <img src="https://byui-wdd.github.io/wdd130/rafting_images/instagram.png" alt="instagram icon">
+          </a>
+      </div>
+  </footer>
+</div>
+  </body>
+
+</html>

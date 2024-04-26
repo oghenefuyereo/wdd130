@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+  <head>
+    <meta charset="utf-8">
+    <title>Site Plan</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+   
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Oswald:wght@700&display=swap');
+      </style>
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Oswald:wght@700&family=Roboto:wght@100&display=swap');
+      </style>
+  </head>
+  <body>
+    <div id="content">
+    <header>
+      <a id="logo-link" href="index.html">
+          <img class="logo" src="images/logo_image/logo.jpg" alt="NP Logo">
+      </a>
+      <nav>
+          <a href="index.html">Home</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+      </nav>
+  </header>
+
+<div class="container">
+  <section id="home-msg">
+    <div>
+    <h1 class="home-title">Welcome to our website!!!</h1>
+    <h4 class="home-sub">Expore On our photography</h4>
+    </div>
+</section>
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="images/portfolio-images/portfolio2.jpg" style="width:100%" alt="portfolio image">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="images/home_images/home1.jpg" style="width:100%" alt="portfolio image">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="images/contact_images/contact.jpg" style="width:100%" alt="portfolio image">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="images/contact_images/contact1.jpg" style="width:100%" alt="portfolio image">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="images/portfolio-images/portfolio8.jpg" style="width:100%" alt="portfolio image">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="images/portfolio-images/portfolio11.jpg" style="width:100%" alt="portfolio image">
+  
+    </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+  <div class="caption-container">
+    <p id="caption"></p>
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/portfolio-images/portfolio2.jpg" style="width:100%" onclick="currentSlide(1)" alt="Beautiful City">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/home_images/home1.jpg" style="width:100%" onclick="currentSlide(2)" alt="Bright Camera">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/contact_images/contact.jpg" style="width:100%" onclick="currentSlide(3)" alt="Unlimited contact">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/contact_images/contact1.jpg" style="width:100%" onclick="currentSlide(4)" alt="Unlimited contact">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/portfolio-images/portfolio8.jpg" style="width:100%" onclick="currentSlide(5)" alt="Beautiful Wedding photography">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/portfolio-images/portfolio11.jpg" style="width:100%" onclick="currentSlide(6)" alt="Black beauty">
+    </div>
+  </div>
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+  <section id="main-msg">
+      <h2 class="header-white-bg-color">Our Camera is The Best of All</h2>
+      <div class="text-msg">
+      <p>        Welcome to our home, where comfort meets style, and where your dreams of a perfect living space become a reality. Our mission is to create a haven that reflects your unique personality and meets your needs, whether you're looking for a cozy retreat, a functional workspace, or a place to entertain.
+
+        At NP, we understand that home is more than just a physical space; it's an expression of your identity and a sanctuary for your family. Our team of dedicated designers and professionals is committed to crafting spaces that resonate with your vision. We take pride in combining aesthetics with functionality, ensuring that your home is not only visually appealing but also suits your lifestyle.
+        
+        From designing your dream kitchen to revamping your living room, we offer a wide range of services to transform your living environment. Our projects are characterized by attention to detail, quality craftsmanship, and a commitment to delivering on time and within budget.
+        
+        Explore our portfolio and be inspired by our previous works, showcasing the diversity and creativity of our designs. Whether it's a contemporary, minimalist look or a more traditional, cozy feel, we can bring your vision to life.
+        
+        Your home is a reflection of who you are, and we're here to make that reflection shine. Let's work together to create a space that you'll love coming home to every day. Contact us to discuss your project, and let's turn your house into the home you've always dreamed of.</p>
+</div>
+        <div id="home-box">
+          <img class="home-img" src="images/home_images/home1.jpg" alt="homepage photos">
+      </div>
+   </section>
+   </div>
+   <footer>
+    <p>Portfolio &copy; 2023 - Oghenefuyere Okiotorhoro</p>
+    <p><a href="https://oghenefuyere.github.io/wdd130a/portfolio/site-plan.html">Site Plan</a></p>
+    <div class="social">
+        <a href="https://facebook.com" target="_blank">
+            <img src="https://byui-wdd.github.io/wdd130/rafting_images/facebook.png" alt="fb icon">
+        </a>
+        <a href="https://twitter.com" target="_blank">
+            <img src="https://byui-wdd.github.io/wdd130/rafting_images/twitter.png" alt="twitter icon">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+            <img src="https://byui-wdd.github.io/wdd130/rafting_images/instagram.png" alt="instagram icon">
+        </a>
+    </div>
+</footer>
+  </div>
+  </div>
+  </body>
+</html>
